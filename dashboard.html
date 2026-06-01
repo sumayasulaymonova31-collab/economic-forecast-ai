@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Economic Forecast AI</title>
+
+    <link rel="stylesheet"
+    href="css/dashboard.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+
+
+<!-- SIDEBAR -->
+
+
+<div class="sidebar">
+
+    <div class="sidebar">
+
+    <h2>
+        Economic AI
+    </h2>
+
+    <ul>
+
+        <li class="active"
+        onclick="scrollToSection('topSection', this)">
+
+            Bosh sahifa
+
+        </li>
+
+
+
+        <li onclick="scrollToSection('analyticsSection', this)">
+
+            AI Tahlil
+
+        </li>
+
+
+
+        <li onclick="scrollToSection('forecastSection', this)">
+
+            Bashorat
+
+        </li>
+
+
+
+        <li onclick="scrollToSection('chatSection', this)">
+
+            AI Yordamchi
+
+        </li>
+
+    </ul>
+
+</div>
+</div>
+
+
+
+<!-- MAIN -->
+
+
+<div class="main-content">
+
+
+
+    <!-- TOPBAR -->
+
+
+    <div class="topbar"
+id="topSection">
+
+        <h1>
+
+    Economic Forecast AI
+
+</h1>
+
+    </div>
+
+
+
+    <!-- WELCOME -->
+
+
+    <div class="welcome-box">
+
+    <h2 id="welcomeMessage">
+
+        Salom 👋
+
+    </h2>
+
+    <p>
+
+        Economic Forecast AI platformasiga xush kelibsiz
+
+    </p>
+
+</div>
+
+
+    <!-- CONTROLS -->
+
+
+    <div class="controls">
+
+        <select id="country">
+
+            <option>O‘zbekiston</option>
+            <option>AQSH</option>
+            <option>Xitoy</option>
+            <option>Qozog‘iston</option>
+
+        </select>
+
+
+
+        <select id="indicator">
+
+            <option>Dollar kursi</option>
+            <option>YAIM</option>
+            <option>Inflyatsiya</option>
+            <option>Eksport</option>
+
+        </select>
+
+
+
+        <button onclick="updateForecast()">
+
+            AI bashorat qilish
+
+        </button>
+<input
+type="file"
+id="fileInput"
+accept=".csv">
+    </div>
+
+
+
+    <!-- CARDS -->
+
+    <div class="cards"
+id="analyticsSection">
+
+
+
+        <div class="card">
+
+            <h3>
+                AI Accuracy
+            </h3>
+
+            <h1>
+                96%
+            </h1>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h3>
+                Stability
+            </h3>
+
+            <h1 id="stability">
+
+                82%
+
+            </h1>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h3>
+                Trend
+            </h3>
+
+            <h1 id="trend">
+
+                Positive
+
+            </h1>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- CHART -->
+
+<h2 id="forecastSection">
+
+    Iqtisodiy Bashorat
+
+</h2>
+    <div class="chart-box"
+id="forecastSection">
+
+        <div class="chart-top">
+
+            <h2>
+                Iqtisodiy bashorat grafigi
+            </h2>
+
+
+
+            <div>
+
+                <button onclick="downloadChart()">
+                    PNG
+                </button>
+
+                <button onclick="downloadCSV()">
+                    CSV
+                </button>
+            <button onclick="downloadPDF()">
+                     PDF
+            </button>
+            </div>
+
+        </div>
+
+
+
+        <canvas id="forecastChart"></canvas>
+
+    </div>
+
+
+
+    <!-- AI CHAT -->
+
+<h2 id="chatSection">
+
+    AI Yordamchi
+
+</h2>
+    <div class="chat-section"
+id="chatSection">
+
+        <h2>
+            AI Yordamchi
+        </h2>
+
+
+
+        <div class="chat-box"
+        id="chatBox">
+
+            <div class="bot-message">
+
+                👋 Salom!
+                Men Economic AI yordamchisiman.
+
+            </div>
+
+        </div>
+
+
+
+        <div class="chat-input">
+
+            <input
+            type="text"
+            id="userInput"
+            placeholder="Savol yozing...">
+
+
+
+            <button onclick="sendMessage()">
+
+                Yuborish
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="loading"
+id="loading">
+
+    AI data tahlil qilmoqda...
+
+</div>
+
+
+
+<div class="notification"
+id="notification">
+
+    Forecast generated successfully 🚀
+
+</div>
+<script src="js/dashboard.js"></script>
+
+<script src="js/chatbot.js"></script>
+
+</body>
+</html>

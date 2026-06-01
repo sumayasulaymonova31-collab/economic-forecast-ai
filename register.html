@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Register</title>
+
+    <link rel="stylesheet"
+    href="css/auth.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+
+        <h1>
+            Economic Forecast AI
+        </h1>
+
+        <p>
+
+            Sun’iy intellekt asosida
+            iqtisodiy bashorat va
+            tahlil platformasi
+
+        </p>
+
+    </div>
+
+
+
+    <div class="right">
+
+        <h2>
+            Register
+        </h2>
+
+        <form onsubmit="registerUser(event)">
+
+
+
+            <input
+            type="text"
+            id="username"
+            placeholder="Foydalanuvchi nomi"
+            required>
+
+
+
+            <input
+            type="email"
+            placeholder="Email"
+            required>
+
+
+
+            <input
+            type="password"
+            placeholder="Parol"
+            required>
+
+
+
+            <button type="submit">
+
+                Akkount yaratish
+
+            </button>
+
+        </form>
+
+
+
+        <div class="bottom">
+
+            Akkountingiz bormi?
+
+            <a href="login.html">
+
+                Login
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+function registerUser(event){
+
+    event.preventDefault();
+
+    const username =
+    document.getElementById(
+    "username"
+    ).value;
+
+    localStorage.setItem(
+    "username",
+    username
+    );
+
+    window.location.href =
+    "dashboard.html";
+
+}
+
+</script>
+
+</body>
+</html>

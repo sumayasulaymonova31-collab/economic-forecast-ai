@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Economic Forecast AI</title>
+
+    <link rel="stylesheet"
+    href="css/auth.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+
+        <h1>
+            Economic Forecast AI
+        </h1>
+
+        <p>
+
+            Sun’iy intellekt asosida
+            iqtisodiy bashorat va
+            tahlil platformasi
+
+        </p>
+
+    </div>
+
+
+
+    <div class="right">
+
+        <h2>
+            Login
+        </h2>
+
+        <form onsubmit="loginUser(event)">
+
+            <input
+            type="text"
+            id="username"
+            placeholder="Foydalanuvchi nomi"
+            required>
+
+
+
+            <input
+            type="password"
+            placeholder="Parol"
+            required>
+
+
+
+            <button type="submit">
+
+                Tizimga kirish
+
+            </button>
+
+        </form>
+
+
+
+        <div class="bottom">
+
+            Akkountingiz yo‘qmi?
+
+            <a href="register.html">
+
+                Register
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+function loginUser(event){
+
+    event.preventDefault();
+
+    const username =
+    document.getElementById(
+    "username"
+    ).value;
+
+    localStorage.setItem(
+    "username",
+    username
+    );
+
+    window.location.href =
+    "dashboard.html";
+
+}
+
+</script>
+
+</body>
+</html>
